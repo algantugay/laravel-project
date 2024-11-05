@@ -36,7 +36,7 @@
                             </div>
                         </div>
     
-                        <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
+                        <h4 class="text-muted text-center font-size-18"><b>Giriş Yap</b></h4>
     
                         <div class="p-3">
 
@@ -45,14 +45,14 @@
     
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input type="email" name="email" class="form-control" required="" placeholder="Email">
+                                        <input id="email" type="email" name="email" class="form-control" required="" placeholder="Email">
                                         <x-input-error :messages="$errors->get('email')" class="mt2" /> 
                                     </div>
                                 </div>
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input type="password" name="password" class="form-control"  required="" placeholder="Şifre">
+                                        <input id="password" type="password" name="password" class="form-control"  required="" placeholder="Şifre">
                                         <x-input-error :messages="$errors->get('password')" class="mt2" /> 
                                     </div>
                                 </div>
@@ -65,10 +65,10 @@
     
                                 <div class="form-group mb-0 row mt-2">
                                     <div class="col-sm-7 mt-3">
-                                        <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Şifrenizi mi unuttunuz?</a>
+                                        <a href="{{ route('password.request') }}" class="text-muted"><i class="mdi mdi-lock"></i> Şifrenizi mi unuttunuz?</a>
                                     </div>
                                     <div class="col-sm-5 mt-3">
-                                        <a href="auth-register.html" class="text-muted"><i class="mdi mdi-account-circle"></i> Hesap Oluştur</a>
+                                        <a href="{{ route('register') }}" class="text-muted"><i class="mdi mdi-account-circle"></i> Hesap Oluştur</a>
                                     </div>
                                 </div>
                             </form>
